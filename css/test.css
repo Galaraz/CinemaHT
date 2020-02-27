@@ -1,0 +1,203 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+}
+h1 {
+
+}
+
+.head{
+
+  float: left;
+  width: 100%;
+  height: 20%;
+  padding: 20px 0px;
+   text-align: center;
+   background: #0057D7;
+   margin-top: auto;
+  
+}
+
+.quadrado{
+  line-height:0; /* correção para IE  */
+  width:0;
+  height:0;
+  border-radius: 2px;
+  border: 30px solid black;
+  border-color: #0f0 ;
+  
+}
+.quadradin{
+
+  line-height:0; /* correção para IE  */
+  width:0;
+  height:0;
+  border-radius: 2px;
+  border: 30px solid black;
+  border-color: white ;
+
+}
+
+
+
+
+
+
+
+
+nav {
+  //background-color: rgb(9, 163, 198);
+  background-image: linear-gradient(55deg,#0057DA,rgb(9, 163, 198));
+  float: left;
+  width: 30%;
+  height: 100%;
+  padding: 20px 0px;
+  text-align: center;
+  color: white;
+  box-sizing: border-box;
+  position: fixed;
+  box-shadow: 5px 0px 10px gray;
+  overflow: hidden;
+  transition: width 1s;
+}
+img {
+  width: 30px;
+}
+nav ul {
+  margin: 0px;
+  padding: 0px;
+}
+nav li {
+  padding: 10px;
+  list-style: none;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+}
+nav li:hover {
+  background-color: rgb(13, 101, 121);
+}
+main {
+  width: 70%;
+  float: right;
+  padding: 40px;
+  box-sizing: border-box;
+  transition: width 1s;
+}
+main h1 {
+  text-align: center;
+}
+form {
+  width: 70%;
+  margin: auto;
+}
+form div {
+  margin: 20px 0px;
+}
+
+
+
+form input[type="text"],
+form input[type="email"],
+form input[type="datetime-local"] {
+  width: 100%;
+  padding: 10px;
+
+}
+form button {
+  background-color: rgb(9, 163, 198);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+}
+.meio {
+  text-align: center;
+}
+.btn-menu-abrir {
+  opacity: 0;
+}
+.btn-menu-abrir-exibir {
+  opacity: 1;
+}
+.exibir-menu {
+  width: 30%;
+}
+.fechar-menu {
+  width: 0%;
+}
+.aumentar-main {
+  width: 100%;
+}
+.mensagens {
+  display: none;
+  background-color: rgb(199, 80, 80);
+  color: white;
+  padding: 20px;
+  opacity: 0.9;
+  position: absolute;
+  width: 60%;
+  animation: slide-mensagem 1s;
+}
+.mensagens.show {
+  display: block;
+}
+.mensagens img {
+  cursor: pointer;
+  width: 10px;
+  float: right;
+}
+
+.div-tabela {
+  padding: 0px 40px;
+  float: left;
+  width: 90%;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  border-bottom: 1px solid gray;
+  padding: 20px 0px;
+  text-align: left;
+}
+td img {
+  width: 20px;
+  cursor: pointer;
+}
+th {
+  color: gray;
+  font-weight: 300;
+}
+@keyframes slide-mensagem {
+  from {
+      transform: translate3d(0px, -50px, 0px);
+      opacity: 0;
+  }
+  to {
+      transform: translate3d(0px, 0px, 0px);
+      opacity: 0.9;
+  }
+}
+form button:hover {
+  background-color: rgb(13, 101, 121);
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  nav {
+      width: 0%;
+  }
+  main {
+      width: 100%;
+  }
+  .btn-menu-abrir {
+      opacity: 1;
+  }
+  .btn-menu-fechar {
+      opacity: 1;
+  }
+}

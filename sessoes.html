@@ -1,0 +1,180 @@
+<html>
+
+<head>
+  <title>HTCinema</title>
+
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="css/global.css" />
+  <script src="js/modelo/Sessao.js"></script>
+</head>
+
+
+
+<body onload="sessaoController.atualizarEstado()">
+
+
+
+
+
+
+  <div id="container" class="container">
+
+
+
+    <div id="head" class="head">
+      <h1>Gerência de Sessões</h1>
+    </div>
+
+    <div class="menu">
+      <nav id="menu">
+        <h2>Cinema High Tech</h2>
+
+        <ul>
+          <a href="reservas.html">
+            <li>Reservas</li>
+          </a>
+
+          <a href="sessoes.html">
+            <li>Sessões</li>
+          </a>
+
+          <a href="salas.html">
+            <li>Salas</li>
+          </a>
+
+
+          <a href="clientes.html">
+            <li>Clientes</li>
+          </a>
+
+          <a href="filmes.html">
+            <li>Filmes</li>
+          </a>
+        </ul>
+
+
+      </nav>
+    </div>
+
+
+    <main>
+
+
+      <div class="mensagens" id="mensagens">
+        <img
+        src="img/close.svg"
+        alt="Botão para fechar janela"
+        onclick="sessaoController.fecharMensagem()"
+        />
+        <span id="textoMensagem"></span>
+        </div>
+
+
+
+
+
+
+      <div id="form">
+        <form>
+          <h2>Nova Sessão</h2>
+
+          <div>
+            <label class="filmeSessao" for="filmeSessao">Filme da Sessão</label>
+            <select id="filmeSessao" name="filmeSessao" class="filmeSessao">
+              <option value="">Escolha o Filme...</option>
+
+            </select>
+          </div>
+          <br>
+
+          <div>
+            <label class="sala" for="select">Sala de Sessão</label>
+            <select id="sala" name="sala" class="sala">
+              <option value="">Escolha uma sala...</option>
+              <option value="Sala1">Sala1</option>
+              <option value="Sala2">Sala2</option>
+              <option value="Sala1">Sala3</option>
+              <option value="Sala2">Sala4</option>
+              
+            </select>
+          </div>
+
+           <br>
+
+
+          <div>
+            <label class="legendado" for="select">Dublado/Legendado</label>
+            <select id="legendado" name="legendado" class="legendado">
+              <option value="">Selecione...</option>
+              <option value="Dublado">Dublado</option>
+              <option value="Legendado">Legendado</option>
+            </select>
+          </div>
+
+         <br>
+          <div>
+            <label class="tresD" for="select">3D/2D</label>
+            <select id="tresD" name="tresD" class="tresD">
+              <option value="3D">3D</option>
+              <option value="2D">2D</option>
+            </select>
+          </div>
+
+
+
+          <br>
+          <div>
+            <label class="data" for="input">Data da sessão</label>
+            <input type="date" placeholder="data" id="data" class="data" />
+          </div>
+
+          <br>
+          <div>
+            <label class="horarioInicio" for="input">Horario de inicio</label>
+            <input type="time" placeholder="horarioInicio" id="horarioInicio" class="horarioInicio" />
+          </div>
+
+
+
+
+          <div class="botaoJuntos">
+            <button type="button" class="azul" onclick="sessaoController.salvar()">
+              Salvar
+            </button>
+            <button type="button" class="vermelho" onclick="sessaoController.cancelar()">
+              Cancelar
+            </button>
+          </div>
+
+        </form>
+
+    
+        
+        <h2>Sessões Cadastradas</h2>
+        <div class="div-tabela">
+          <table class="tabela">
+            <thead>
+              <th>Filme</th>
+              <th>Data</th>
+              <th>Inicio</th>
+              <th>Dublado/Legendado</th>
+              <th>Sala</th>
+              <th>3D/2D</th>
+              <th>Editar</th>
+              <th>Excluir</th>
+            </thead>
+
+
+            <tbody id="tabela-corpo"></tbody>
+          </table>
+        </div>
+
+     
+
+    </main>
+ 
+  </div>
+
+</body>
+
+</html>

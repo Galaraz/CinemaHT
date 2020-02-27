@@ -1,0 +1,531 @@
+<html>
+
+
+<head>
+    <title>HTCinema</title>
+
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/global.css" />
+    <script src="js/modelo/Reserva.js"></script>
+</head>
+
+
+<body onload="reservaController.atualizarEstado()">
+
+
+
+
+
+    <div id="container" class="container">
+
+
+
+        <div id="head" class="head">
+            <h1>Nova reserva</h1>
+        </div>
+
+        <div class="menu">
+            <nav id="menu">
+                <h2>Cinema High Tech</h2>
+
+                <ul>
+                    <a href="reservas.html">
+                        <li>Reservas</li>
+                    </a>
+
+                    <a href="sessoes.html">
+                        <li>Sessões</li>
+                    </a>
+
+                    <a href="salas.html">
+                        <li>Salas</li>
+                    </a>
+
+
+                    <a href="clientes.html">
+                        <li>Clientes</li>
+                    </a>
+
+                    <a href="filmes.html">
+                        <li>Filmes</li>
+                    </a>
+                </ul>
+
+            </nav>
+        </div>
+
+
+        <main>
+            <div id="form">
+                <form>
+                    <h2> Novas Reservas</h2>
+
+
+
+                    <div>
+                        <label class="" for="select">Sessão</label>
+                        <select id="sessao" name="sessao" class="sessao">
+                            <option value="1">Escolha o Filme</option>
+                            <option value="2">???</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label class="" for="select">Cliente</label>
+                        <select id="cliente" name="cliente" class="cliente">
+                            <option value="1">Escolha o Cliente</option>
+                            <option value="2">???</option>
+                        </select>
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <fieldset>
+                            <legend>Escolha a cadeira:</legend>
+
+                            <div class="cadeira-group">
+
+                                <table id="outro" type="checkbox" class="cadeiras-tab" border="0" cellpadding="1"
+                                    cellspacing="1" height="278" width="923">
+                                    <tbody>
+
+                                        <tr id="fileiraA">
+
+                                            <td style="text-align: center;">
+                                                <div class='quadradin'>A</div>
+                                            </td>
+
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira0"
+                                                onclick="reservaController.cadeiraStatus()">1</div>
+                                            </td>
+                                            
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira1"
+                                                onclick="reservaController.cadeiraStatus()">2</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira2"
+                                                onclick="reservaController.cadeiraStatus()">3</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira3"
+                                                onclick="reservaController.cadeiraStatus()">4</div>
+                                            </td>
+
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira4"
+                                                onclick="reservaController.cadeiraStatus()">5</div>
+                                            </td>
+
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira5"
+                                                onclick="reservaController.cadeiraStatus()">6</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira6"
+                                                onclick="reservaController.cadeiraStatus()">7</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira7"
+                                                onclick="reservaController.cadeiraStatus()">8</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira8"
+                                                onclick="reservaController.cadeiraStatus()">9</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira9"
+                                                onclick="reservaController.cadeiraStatus()">10</div>
+                                            </td>
+
+                                        </tr>
+
+
+                                        <tr id="fileiraB">
+
+                                            <td style="text-align: center;">
+                                                <div class='quadradin'>B</div>
+                                            </td>
+
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira0"
+                                                onclick="reservaController.cadeiraStatus()">1</div>
+                                            </td>
+                                            
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira1"
+                                                onclick="reservaController.cadeiraStatus()">2</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira2"
+                                                onclick="reservaController.cadeiraStatus()">3</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira3"
+                                                onclick="reservaController.cadeiraStatus()">4</div>
+                                            </td>
+
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira4"
+                                                onclick="reservaController.cadeiraStatus()">5</div>
+                                            </td>
+
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira5"
+                                                onclick="reservaController.cadeiraStatus()">6</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira6"
+                                                onclick="reservaController.cadeiraStatus()">7</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira7"
+                                                onclick="reservaController.cadeiraStatus()">8</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira8"
+                                                onclick="reservaController.cadeiraStatus()">9</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira9"
+                                                onclick="reservaController.cadeiraStatus()">10</div>
+                                            </td>
+                                        </tr>
+
+
+
+                                        <tr id="fileiraC">
+                                            <td style="text-align: center;">
+                                                <div class='quadradin'>C</div>
+                                            </td>
+
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira0"
+                                                onclick="reservaController.cadeiraStatus()">1</div>
+                                            </td>
+                                            
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira1"
+                                                onclick="reservaController.cadeiraStatus()">2</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira2"
+                                                onclick="reservaController.cadeiraStatus()">3</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira3"
+                                                onclick="reservaController.cadeiraStatus()">4</div>
+                                            </td>
+
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira4"
+                                                onclick="reservaController.cadeiraStatus()">5</div>
+                                            </td>
+
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira5"
+                                                onclick="reservaController.cadeiraStatus()">6</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira6"
+                                                onclick="reservaController.cadeiraStatus()">7</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira7"
+                                                onclick="reservaController.cadeiraStatus()">8</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira8"
+                                                onclick="reservaController.cadeiraStatus()">9</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira9"
+                                                onclick="reservaController.cadeiraStatus()">10</div>
+                                            </td>
+
+                                        </tr>
+
+
+
+                                        <tr id="fileiraD">
+
+                                            <td style="text-align: center;">
+                                                <div class='quadradin'>D</div>
+                                            </td>
+
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira0"
+                                                onclick="reservaController.cadeiraStatus()">1</div>
+                                            </td>
+                                            
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira1"
+                                                onclick="reservaController.cadeiraStatus()">2</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira2"
+                                                onclick="reservaController.cadeiraStatus()">3</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira3"
+                                                onclick="reservaController.cadeiraStatus()">4</div>
+                                            </td>
+
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira4"
+                                                onclick="reservaController.cadeiraStatus()">5</div>
+                                            </td>
+
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira5"
+                                                onclick="reservaController.cadeiraStatus()">6</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira6"
+                                                onclick="reservaController.cadeiraStatus()">7</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira7"
+                                                onclick="reservaController.cadeiraStatus()">8</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira8"
+                                                onclick="reservaController.cadeiraStatus()">9</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira9"
+                                                onclick="reservaController.cadeiraStatus()">10</div>
+                                            </td>
+
+                                        </tr>
+
+                                        <tr id="fileiraE">
+
+                                            <td style="text-align: center;">
+                                                <div class='quadradin'>E</div>
+                                            </td>
+
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira0"
+                                                onclick="reservaController.cadeiraStatus()">1</div>
+                                            </td>
+                                            
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira1"
+                                                onclick="reservaController.cadeiraStatus()">2</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira2"
+                                                onclick="reservaController.cadeiraStatus()">3</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira3"
+                                                onclick="reservaController.cadeiraStatus()">4</div>
+                                            </td>
+
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira4"
+                                                onclick="reservaController.cadeiraStatus()">5</div>
+                                            </td>
+
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira5"
+                                                onclick="reservaController.cadeiraStatus()">6</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira6"
+                                                onclick="reservaController.cadeiraStatus()">7</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira7"
+                                                onclick="reservaController.cadeiraStatus()">8</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira8"
+                                                onclick="reservaController.cadeiraStatus()">9</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira9"
+                                                onclick="reservaController.cadeiraStatus()">10</div>
+                                            </td>
+
+                                        </tr>
+
+
+                                        <tr id="fileiraF">
+
+                                            <td style="text-align: center;">
+                                                <div class='quadradin'>F</div>
+                                            </td>
+
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira0"
+                                                onclick="reservaController.cadeiraStatus()">1</div>
+                                            </td>
+                                            
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira1"
+                                                onclick="reservaController.cadeiraStatus()">2</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira2"
+                                                onclick="reservaController.cadeiraStatus()">3</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira3"
+                                                onclick="reservaController.cadeiraStatus()">4</div>
+                                            </td>
+
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira4"
+                                                onclick="reservaController.cadeiraStatus()">5</div>
+                                            </td>
+
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira5"
+                                                onclick="reservaController.cadeiraStatus()">6</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira6"
+                                                onclick="reservaController.cadeiraStatus()">7</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira7"
+                                                onclick="reservaController.cadeiraStatus()">8</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira8"
+                                                onclick="reservaController.cadeiraStatus()">9</div>
+                                            </td>
+
+                                            <td style="text-align: center;">
+                                                <div class='cadeiraLivre' id="cadeira9"
+                                                onclick="reservaController.cadeiraStatus()">10</div>
+                                            </td>
+
+                                        </tr>
+
+
+
+
+                                    </tbody>
+                                </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </fieldset>
+                    </div>
+
+
+
+                    <div class="botaoJuntos">
+                        <button type="button" class="azul" onclick="contasController.salvar()">
+                            Salvar
+                        </button>
+                        <button type="button" class="vermelho" onclick="contasController.cancelar()">
+                            Cancelar
+                        </button>
+                    </div>
+
+                </form>
+
+
+                <div id="tabela">
+                    <h2>Reservas Cadastradas</h2>
+                    <div class="div-tabela">
+                        <table class="tabela">
+                            <thead>
+                                <th>Filme</th>
+                                <th>Data</th>
+                                <th>Inicio</th>
+                                <th>Dublado/Legendado</th>
+                                <th>Sala</th>
+                                <th>3D/2D</th>
+
+                            </thead>
+
+                            <tbody id="tabela-corpo"></tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </main>
+
+</body>
+
+</html>

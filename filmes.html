@@ -1,0 +1,153 @@
+<html>
+
+<head>
+  <title>HTCinema</title>
+
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="css/global.css" />
+  <script src="js/modelo/Filme.js"></script>
+</head>
+
+
+
+<body onload="filmeController.atualizarEstado()">
+
+
+
+
+
+  <div id="container" class="container">
+
+
+    <div id="head" class="head">
+      <h1>Gerencia de Filmes</h1>
+    </div>
+
+    <div class="menu">
+      <nav id="menu">
+        <h2>Cinema High Tech</h2>
+
+        <ul>
+          <a href="reservas.html">
+              <li>Reservas</li>
+          </a>
+
+          <a href="sessoes.html">
+              <li>Sessões</li>
+          </a>
+
+          <a href="salas.html">
+              <li>Salas</li>
+          </a>
+
+
+          <a href="clientes.html">
+              <li>Clientes</li>
+          </a>
+
+          <a href="filmes.html">
+              <li>Filmes</li>
+          </a>
+      </ul>
+      </nav>
+    </div>
+
+
+
+
+
+    <main id="main">
+
+
+      <div class="mensagens" id="mensagens">
+        <img src="img/close.svg" alt="Botão para fechar janela" onclick="filmeController.fecharMensagem()" />
+        <span id="textoMensagem"></span>
+      </div>
+
+
+
+      <div id="form">
+        <form>
+          
+          
+          <h2>Novo Filme</h2>
+                  
+         
+          <div>
+            <label for="titulo">Nome do Filme</label>
+            <input type="text" placeholder="Nome do Filme" id="titulo"class="cadastro-input" />
+          </div>
+ 
+ 
+         
+
+          <div>
+            <label for="duracao">Duração</label>
+            <input type="text" placeholder="Duração do filme" id="duracao" class="cadastro-input"/>
+          </div>
+          
+
+
+          <div>
+            <label for="classificacao">Classificação etária </label>
+            <input type="text" placeholder="Classificação etária" id="classificacao" class="cadastro-input"/>
+          </div>
+         
+                                  
+
+
+          <div>
+            <label for="genero">Gênero</label>
+            <input type="text" placeholder="Email do cliente" id="genero" class="cadastro-input"/>
+          </div>
+
+
+
+          <div>
+            <label for="sinopse">Sinopse </label>
+            <input type="text" placeholder="Sinopse do filme" id="sinopse" class="cadastro-input"/>
+          </div>
+
+
+          <div class="botaoJuntos">
+
+            <button class="azul" type="button" onclick="filmeController.salvar()">
+            Salvar
+            </button>
+
+            <button class="vermelho" type="button" onclick="filmeController.cancelar()">
+            Cancelar
+            </button>
+
+          </div>
+
+        </form>
+
+      </div>
+
+      <div id="tabela">
+        <h2>Filmes Cadastrados</h2>
+        <div class="div-tabela">
+          <table class="tabela">
+            <thead>
+              <th>Filme</th>
+              <th>Duração</th>
+              <th>Editar</th>
+              <th>Excluir</th>
+              
+            </thead>
+
+            <tbody id="tabela-corpo"></tbody>
+          </table>
+        </div>
+
+
+      </div>
+
+    <//div>
+
+  </main>
+
+</body>
+
+</html>

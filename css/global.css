@@ -1,0 +1,350 @@
+body{
+
+margin:0px;
+padding:0px;
+font-family: sans-serif;
+}
+
+
+
+.head{
+
+  float: left;
+  width: 100%;
+  height: 10%;
+  padding: 10px 0px;
+   text-align: center;
+   background: #00184B;
+   margin-top: auto;
+   color:white;
+}
+
+
+nav{
+
+background-image: linear-gradient(55deg,#0057DA,rgb(9, 163, 198));
+float: left;
+width: 30%;
+height: 100%;
+padding: 20px 0px;
+text-align: center;
+color: white;
+box-sizing: border-box;
+position: fixed;
+box-shadow: 5px 0px 10px gray;
+overflow: hidden;
+transition: width 1s;
+}
+
+
+
+
+img{
+width: 30px;
+
+}
+
+nav ul {
+
+margin: 0px;
+padding: 0px;
+
+}
+
+nav li {
+
+padding: 20px;
+list-style: none;
+boder-bottom: 2px solid ;
+text-align: left;
+
+}
+
+nav a {
+ 
+text-decoration: none;
+color: white;
+
+}
+
+nav li:hover {
+background-color: #00184B;
+
+}
+
+
+
+
+select {
+  margin-left: 3%;
+  width: 70%;
+  padding: 5px 0px;
+  border-radius: 5px;
+  background-color: white;
+
+}
+
+
+
+main{
+
+width: 70%;
+float: right;
+padding:40px;
+box-sizing: border-box;
+transition: width 1s;
+
+
+}
+
+main h1{
+text-aling: center;
+
+}
+form{
+margin: 20px 0px;
+
+
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="text"]
+{
+
+width: 70%;
+padding: 10px;
+margin:10px ;
+
+}
+
+
+ form fieldset{
+  
+align-content: center;
+width: 100%;
+height:620px ;
+margin: auto;
+
+
+
+
+ }
+form label{
+
+width: 30%;
+
+
+}
+
+form button{
+  background-color: rgb (9, 163, 198);
+  border:none;
+  padding: 10px 20px;
+  height: 40px;
+  width: 100px;
+  text-decoration-color: beige;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 2px;
+  color: white;
+ 
+}
+
+
+
+
+ div.cadeira-group td{
+ 
+  
+  padding: 20px 0px;
+  text-align: center;
+  border-bottom: 1px ;
+}
+
+
+
+
+
+
+
+
+
+ .cadastro-input{
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid gray;
+  font-size: 12pt;
+  color: gray;
+  padding: 10px 0px;
+
+}
+
+
+.cadeiraStatus{
+  line-height:0; 
+  width:0;
+  height:0;
+  border-radius: 2px;
+  border: 30px  solid black;
+  border-color: #0E893D;
+  color: white;
+  
+}
+
+.cadeiraStatus:hover {
+  border-color: #00184B;
+  cursor: pointer;
+}
+
+
+
+
+.cadeiraLivre{
+  line-height:0; 
+  width:0;
+  height:0;
+  border-radius: 2px;
+  border: 30px  solid black;
+  border-color: #0E893D;
+  color: white;
+  
+}
+
+.cadeiraLivre:hover {
+  border-color: #00184B;
+  cursor: pointer;
+}
+
+
+
+.cadeiraOcupada{
+  line-height:0; 
+  width:0;
+  height:0;
+  border-radius: 2px;
+  border: 30px  solid black;
+  border-color: brown;
+  color: white;
+}
+
+.cadeiraOcupada:hover {
+  border-color: #00184B;
+  cursor: pointer;
+}
+
+
+
+.quadradin{
+
+  line-height:0; 
+  width:0;
+  height:0;
+  border-radius: 2px;
+  border: 30px solid black;
+  border-color: white ;
+  text-decoration-style: solid;
+
+}
+
+
+
+
+
+.mensagens {
+  display: none;
+  background-color: rgb(199, 80, 80);
+  color: white;
+  padding: 20px;
+  opacity: 0.9;
+  position: absolute;
+  width: 60%;
+  animation: slide-mensagem 1s;
+}
+.mensagens.show {
+  display: block;
+}
+
+  
+.mensagens img {
+  cursor: pointer;
+  width: 10px;
+  float: right;
+}
+
+
+.div-tabela {
+  padding: 0px 40px;
+  float: left;
+  width: 90%;
+  
+}
+
+.botaoJuntos{
+  text-align: center;
+  padding: 20px;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  
+
+
+}
+th,
+td {
+  border-bottom: 1px solid gray;
+  padding: 20px 0px;
+  text-align: left;
+}
+td img {
+  width: 20px;
+  cursor: pointer;
+}
+th {
+  color: whitesmoke;
+  font-weight: 300;
+  background-color: #00184B;
+}
+@keyframes slide-mensagem {
+  from {
+      transform: translate3d(0px, -50px, 0px);
+      opacity: 0;
+  }
+  to {
+      transform: translate3d(0px, 0px, 0px);
+      opacity: 0.9;
+  }
+}
+
+form button.azul {
+
+  background-color: rgb(9, 163, 198);
+  
+  }
+  
+  form button.vermelho{
+    background-color: brown;
+  }
+
+
+form button:hover {
+  background-color: #00184B;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  nav {
+      width: 0%;
+  }
+  main {
+      width: 100%;
+  }
+  
+}
+
+
+
+
+
+
